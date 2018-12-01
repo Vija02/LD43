@@ -15,6 +15,8 @@ public class CameraFollow : MonoBehaviour {
 
     private Transform target;
 
+    public Camera cam;
+
     // Use this for initialization
     void Start () {
         target = GameObject.Find("Player").transform;
@@ -22,7 +24,8 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-        transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin,xMax), Mathf.Clamp(target.position.y, yMin,yMax), transform.position.z);
+        float camWidth = cam.orthographicSize;
+        transform.position = new Vector3(Mathf.Clamp(target.position.x, xMin - camWidth, xMax + camWidth), Mathf.Clamp(target.position.y, yMin,yMax), transform.position.z);
 	}
 }
 
