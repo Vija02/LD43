@@ -22,6 +22,10 @@ public class Movement : MonoBehaviour
     private Vector3 m_Velocity = Vector3.zero;
 
     // Jumping forces
+    public bool enableDoubleJump = true;
+    private bool ableToDoubleJump = false; // To know when the user released the jump key
+    private bool doubleJumped = false; // Whether double jumped used or not
+
     private bool wasJumping = false;
     public float airTime = 0.05f; // This is the duration where pressing jump will still make a difference
     private float currentAirTime = 0f; // Current count
@@ -63,6 +67,8 @@ public class Movement : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 wasJumping = false;
+                ableToDoubleJump = false;
+                doubleJumped = false;
                 m_Grounded = true;
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
@@ -72,6 +78,10 @@ public class Movement : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
+        if (wasJumping && !jump)
+        {
+            ableToDoubleJump = true;
+        }
         if (!wasJumping && jump)
         {
             currentAirTime = airTime;
@@ -143,6 +153,12 @@ public class Movement : MonoBehaviour
         {
             // Add a vertical force to the player.
             m_Grounded = false;
+            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+        }
+        if (enableDoubleJump && ableToDoubleJump && !doubleJumped && jump)
+        {
+            currentAirTime = airTime;
+            doubleJumped = true;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
