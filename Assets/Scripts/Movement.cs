@@ -158,4 +158,12 @@ public class Movement : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Moving Platform")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+
 }
