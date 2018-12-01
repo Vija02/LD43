@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class MovementInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Movement movementScript;
 
     // Update is called once per frame
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
-        Debug.Log(horizontal);
+
+        movementScript.Move(horizontal, false, false);
+
     }
 }
