@@ -817,6 +817,24 @@ MonoBehaviour:
   - {fileID: 1086837345}
   - {fileID: 684398840}
   pointSelection: 1
+--- !u!1 &571844188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1518871238428898, guid: 53b72568ed38f974b9faf53eb6785bd3,
+    type: 2}
+  m_PrefabInternal: {fileID: 87279544}
+--- !u!114 &571844189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571844188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91be2a345c7ea648b429ee9943d2547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minHeightAllowed: -30
+  respawnPoint: {x: -9.43, y: -0.44, z: 0}
 --- !u!1 &606736156
 GameObject:
   m_ObjectHideFlags: 0
