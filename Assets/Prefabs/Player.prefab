@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4956082057080216}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: FloorCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4173411301878412}
   m_Layer: 0
-  m_Name: Ceiling
+  m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementScript: {fileID: 114469826669712780}
+  moveSpeed: 50
 --- !u!114 &114469826669712780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acb31750477a4d4ca71a066feeaf611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 130
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -180,6 +181,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4956082057080216}
   m_CeilingCheck: {fileID: 4173411301878412}
   m_CrouchDisableCollider: {fileID: 0}
+  airTime: 0.05
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
