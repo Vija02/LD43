@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
+    [SerializeField] private float m_JumpForce = 130f;                          // Amount of force added when the player jumps.
     [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
@@ -20,6 +20,11 @@ public class Movement : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+
+    // Jumping forces
+    private bool wasJumping = false;
+    public float airTime = 0.05f; // This is the duration where pressing jump will still make a difference
+    private float currentAirTime = 0f; // Current count
 
     [Header("Events")]
     [Space]
@@ -45,6 +50,8 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        currentAirTime -= Time.fixedDeltaTime;
+
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
 
@@ -55,6 +62,7 @@ public class Movement : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
+                wasJumping = false;
                 m_Grounded = true;
                 if (!wasGrounded)
                     OnLandEvent.Invoke();
@@ -64,6 +72,11 @@ public class Movement : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
+        if (!wasJumping && jump)
+        {
+            currentAirTime = airTime;
+            wasJumping = true;
+        }
         // If crouching, check to see if the character can stand up
         if (!crouch)
         {
@@ -126,7 +139,7 @@ public class Movement : MonoBehaviour
             }
         }
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (jump && currentAirTime > 0)
         {
             // Add a vertical force to the player.
             m_Grounded = false;

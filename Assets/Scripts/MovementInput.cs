@@ -6,12 +6,28 @@ public class MovementInput : MonoBehaviour
 {
     public Movement movementScript;
 
-    // Update is called once per frame
+    public float moveSpeed = 50f;
+
+    float horizontalMove = 0f;
+    bool jump = false;
+
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
 
-        movementScript.Move(horizontal, false, false);
+        if (Input.GetButton("Jump"))
+        {
+            jump = true;
+        }
+        else
+        {
+            jump = false;
+        }
 
+    }
+
+    void FixedUpdate()
+    {
+        movementScript.Move(horizontalMove * moveSpeed * Time.fixedDeltaTime, false, jump);
     }
 }
