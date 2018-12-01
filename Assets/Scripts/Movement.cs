@@ -158,11 +158,22 @@ public class Movement : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+   // Let the player stick to the moving platform once they collided //
+     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.transform.tag == "Moving Platform")
+        if(other.transform.tag == "Moving Platform")
+        { 
+            transform.parent = other.transform;
+        }
+
+    }
+
+    // Free the player when it jumps off //
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.transform.tag == "Moving Platform")
         {
-            transform.parent = collision.transform;
+            transform.parent = null;
         }
     }
 
