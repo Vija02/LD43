@@ -197,11 +197,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4654511185585632, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.67
+      value: -9.43
       objectReference: {fileID: 0}
     - target: {fileID: 4654511185585632, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.39543426
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4654511185585632, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -377,7 +377,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259723392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.78, y: 0, z: -10}
+  m_LocalPosition: {x: 1.86, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -394,8 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3bbc99ca0bf8a4e8861d83a3417a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMax: 0
-  yMax: 0
+  xMax: 8
+  yMax: 4
   xMin: 0
   yMin: 0
 --- !u!1 &413313206
