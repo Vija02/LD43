@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovableObject : MonoBehaviour {
+public class RigidBodySleep : MonoBehaviour {
 
     [SerializeField]
     public Rigidbody2D rBody;
