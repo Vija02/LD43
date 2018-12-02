@@ -131,6 +131,11 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!4 &228439374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4869873247030856, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+    type: 2}
+  m_PrefabInternal: {fileID: 257021935}
 --- !u!1 &239196125
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +173,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114015825899126302, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: Points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4953537758851358, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -211,6 +221,26 @@ Prefab:
     - target: {fileID: 4027757900950888, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114015825899126302, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: Points.Array.data[0]
+      value: 
+      objectReference: {fileID: 228439374}
+    - target: {fileID: 114015825899126302, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: Points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1266229805}
+    - target: {fileID: 114015825899126302, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: Platform
+      value: 
+      objectReference: {fileID: 1450145425}
+    - target: {fileID: 114015825899126302, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3, type: 2}
@@ -265,7 +295,6 @@ MonoBehaviour:
   points:
   - {fileID: 1909055557}
   - {fileID: 930078201}
-  pointSelection: 0
 --- !u!1 &423969578
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &423969579
 Transform:
   m_ObjectHideFlags: 0
@@ -377,7 +406,6 @@ GameObject:
   - component: {fileID: 473183732}
   - component: {fileID: 473183734}
   - component: {fileID: 473183733}
-  - component: {fileID: 473183735}
   m_Layer: 5
   m_Name: SacrificePanel
   m_TagString: Untagged
@@ -439,18 +467,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473183731}
   m_CullTransparentMesh: 0
---- !u!114 &473183735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 473183731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c340629602086074e8a0ff294693d6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.01
 --- !u!1 &541394613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1024,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1266229805 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4027757900950888, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+    type: 2}
+  m_PrefabInternal: {fileID: 257021935}
 --- !u!1 &1360981188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1131,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1923927781768660, guid: 051cbcaa2c72c5b49a654ce93fe7547e,
     type: 2}
   m_PrefabInternal: {fileID: 1939612240}
+--- !u!1 &1450145425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1982482782906168, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+    type: 2}
+  m_PrefabInternal: {fileID: 257021935}
 --- !u!1001 &1666383513
 Prefab:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class MovingPlatform : MonoBehaviour {
         Platform.transform.position = Vector3.MoveTowards(Platform.transform.position,CurrentPoint.position, Time.deltaTime * MoveSpeed);
 
         if (Platform.transform.position == CurrentPoint.position)
-        {
+        { 
             //Only allows two states (0, 1)
             PointSelection = (PointSelection + 1) % Points.Length;
 
