@@ -6,9 +6,10 @@ public class SetCheckPoint : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Respawn.respawnPoint = transform.position;
+            transform.position = new Vector3(0, -10, 0);
         }
     }
 }
