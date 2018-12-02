@@ -8,21 +8,32 @@ public class Respawn : MonoBehaviour
     [SerializeField]
     private float minHeightAllowed;
     [SerializeField]
-    private Vector3 respawnPoint;
+    public Vector3 respawnPoint;
+    [SerializeField]
+    private GameObject[] respawnBlocks;
 
-    GameObject block;
+    private Vector3[] originalBlockPos;
 
     void Start()
     {
-        block = GameObject.Find("face-block");
+         originalBlockPos = new Vector3[respawnBlocks.Length];
+         for(int i=0; i<respawnBlocks.Length; i++)
+         {
+             originalBlockPos[i] = respawnBlocks[i].transform.position;
+         }
+
     }
 
     void Update()
     {
         if (transform.position.y < minHeightAllowed)
         {
+              for (int i = 0; i < respawnBlocks.Length; i++)
+              {
+                  respawnBlocks[i].transform.position = originalBlockPos[i];
+              } 
+
             transform.position = respawnPoint;
-            block.transform.position = new Vector3(1.75f, -1.523046f, 0);
         }
     }
 }
