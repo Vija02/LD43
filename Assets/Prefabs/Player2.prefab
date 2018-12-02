@@ -542,8 +542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7e6ee68d9187f40893d876d2770c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableGrapplingHook: 0
   joint: {fileID: 232660196911883768}
   lineRenderer: {fileID: 120802986049788506}
+  buttonName: Use Item2
 --- !u!114 &114706456082875672
 MonoBehaviour:
   m_ObjectHideFlags: 1

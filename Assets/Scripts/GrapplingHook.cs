@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GrapplingHook : MonoBehaviour {
 
+    public bool enableGrapplingHook = false;
+
     public DistanceJoint2D joint;
     public LineRenderer lineRenderer;
+
+    public string buttonName = "Use Item";
 
     private bool hooked = false;
 
     void Update() {
-        if (Input.GetKey(KeyCode.V))
+        if (Input.GetButton(buttonName) && enableGrapplingHook)
         {
             hooked = true;
             GameObject[] hooks = GameObject.FindGameObjectsWithTag("Hook");
