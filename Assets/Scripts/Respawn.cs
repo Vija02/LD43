@@ -31,8 +31,8 @@ public class Respawn : MonoBehaviour
               for (int i = 0; i < respawnBlocks.Length; i++)
               {
                   respawnBlocks[i].transform.position = originalBlockPos[i];
-              } 
-
+              }
+            Debug.Log(respawnPoint);
             transform.position = respawnPoint;
             gameObject.GetComponent<Rigidbody2D>().Sleep();
         }
