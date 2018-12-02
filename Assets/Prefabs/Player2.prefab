@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acb31750477a4d4ca71a066feeaf611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 130
+  m_JumpForce: 160
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_CeilingCheck: {fileID: 4208394595169844}
   m_CrouchDisableCollider: {fileID: 0}
   enableDoubleJump: 1
-  airTime: 0.05
+  airTime: 0.1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
