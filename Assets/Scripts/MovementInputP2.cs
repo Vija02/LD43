@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementInput : MonoBehaviour
-{
+public class MovementInputP2 : MonoBehaviour {
+
     public Movement movementScript;
 
     public float moveSpeed = 50f;
@@ -13,9 +13,9 @@ public class MovementInput : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal2");
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Jump2"))
         {
             jump = true;
         }
