@@ -33808,7 +33808,7 @@ GameObject:
   - component: {fileID: 1728928852}
   - component: {fileID: 1728928853}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Sacrifice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33841,7 +33841,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.8041935, y: -1.5726347}
