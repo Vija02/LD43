@@ -84,6 +84,7 @@ public class Movement : MonoBehaviour
         }
         if (!wasJumping && jump)
         {
+            playJumpSound();
             currentAirTime = airTime;
             wasJumping = true;
         }
@@ -157,6 +158,7 @@ public class Movement : MonoBehaviour
         }
         if (enableDoubleJump && ableToDoubleJump && !doubleJumped && jump)
         {
+            playJumpSound();
             currentAirTime = airTime;
             doubleJumped = true;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
@@ -191,6 +193,11 @@ public class Movement : MonoBehaviour
         {
             transform.parent = null;
         }
+    }
+
+    public void playJumpSound()
+    {
+        gameObject.transform.Find("Sounds/Jumps").gameObject.GetComponent<AudioSource>().Play();
     }
 
 }
