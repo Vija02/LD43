@@ -12,7 +12,7 @@ public class FadeInScript : MonoBehaviour {
         Color c = rend.material.color;
         c.a = 0f;
         rend.material.color = c;
-        StartCoroutine("FadeIn");
+        
     }
 	
 
@@ -30,6 +30,6 @@ public class FadeInScript : MonoBehaviour {
     public void StartFading()
     {
         //Add trigger here
-        //StartCoroutine("FadeIn");
+        StartCoroutine("FadeIn");
     }
 }

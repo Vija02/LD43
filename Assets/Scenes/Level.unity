@@ -224,6 +224,8 @@ GameObject:
   m_Component:
   - component: {fileID: 423969579}
   - component: {fileID: 423969580}
+  - component: {fileID: 423969582}
+  - component: {fileID: 423969581}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -290,6 +292,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &423969581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423969578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d021e5e8d2ab44ebf44b7aa8945b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &423969582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423969578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c340629602086074e8a0ff294693d6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473183731
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +493,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theReaper: {fileID: 423969578}
+  fadein: {fileID: 423969582}
+  fadeout: {fileID: 423969581}
 --- !u!61 &559308394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -481,7 +507,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.93130684, y: -2.0544205}
+  m_Offset: {x: -0.93130684, y: -2.5179663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -492,7 +518,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.074993, y: 6.0401535}
+  m_Size: {x: 21.074993, y: 6.967245}
   m_EdgeRadius: 0
 --- !u!1 &822633135
 GameObject:
