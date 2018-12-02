@@ -4,36 +4,33 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour {
 
-    public GameObject platform;
+    public GameObject Platform;
 
-    public float moveSpeed;
+    public float MoveSpeed;
 
-    public Transform currentPoint;
+    public Transform CurrentPoint;
 
-    public Transform[] points;
+    public Transform[] Points;
 
-    public int pointSelection;
+    public int PointSelection;
 
 	// Use this for initialization
 	void Start () {
-        currentPoint = points[pointSelection];
+        CurrentPoint = Points[PointSelection];
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+        //Move dTime * speed each frame
+        Platform.transform.position = Vector3.MoveTowards(Platform.transform.position,CurrentPoint.position, Time.deltaTime * MoveSpeed);
 
-        if(platform.transform.position == currentPoint.position)
+        if (Platform.transform.position == CurrentPoint.position)
         {
-            pointSelection++;
+            //Only allows two states (0, 1)
+            PointSelection = (PointSelection + 1) % Points.Length;
 
-            if(pointSelection == points.Length)
-            {
-                pointSelection = 0;
-            }
-
-            currentPoint = points[pointSelection];
+            CurrentPoint = Points[PointSelection];
         }
     }
 }

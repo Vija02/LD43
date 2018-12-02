@@ -13,7 +13,12 @@ public class ButtonScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //Flicks lever
             gameObject.GetComponent<SpriteRenderer>().sprite = sprite[1];
+
+            //Code here
+
+            //Release Lever
             StartCoroutine("Release");
                
         }
@@ -22,6 +27,7 @@ public class ButtonScript : MonoBehaviour {
 
     IEnumerator Release()
     {
+        //Releases lever in X seconds
         yield return new WaitForSeconds(timer);
         gameObject.GetComponent<SpriteRenderer>().sprite = sprite[0];
     }

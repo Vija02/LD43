@@ -6,12 +6,11 @@ public class SlideScript : MonoBehaviour {
 
     public GameObject Bar;
 
-
     public Transform CurrentPoint;
 
     public Transform[] points;
 
-    public int pointSelection;
+    int pointSelection;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +22,7 @@ public class SlideScript : MonoBehaviour {
 
         if(Bar.transform.position == CurrentPoint.position)
         {
+            //Only allows two states (0, 1)
              pointSelection = (pointSelection + 1) % 2;
             
              CurrentPoint = points[pointSelection];
@@ -32,6 +32,7 @@ public class SlideScript : MonoBehaviour {
     // Bar moves in and out when player clicks the button
     public void OnClick()
     {
+        //Teleports the bar to its hidden/ shown position
         while (Bar.transform.position != CurrentPoint.position)
         {
             Bar.transform.position = Vector3.MoveTowards(Bar.transform.position, CurrentPoint.position, Time.deltaTime);

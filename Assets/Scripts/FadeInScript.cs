@@ -15,12 +15,13 @@ public class FadeInScript : MonoBehaviour {
         rend.material.color = c;
         
     }
-	
 
+    //Slowly fade out the sprite
     IEnumerator FadeIn()
     {
         for (float f=0.05f; f<=1; f += speed)
         {
+            //change c's alpha value
             Color c = rend.material.color;
             c.a = f;
             rend.material.color = c;

@@ -18,14 +18,16 @@ public class RigidBodySleep : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //When left shift is clicked, enable physics
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             rBody.isKinematic = false;
         }
 
+        //When realsed, the block could no longer be moved
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            stopMoving();
+            StopMoving();
         }
     }
 
@@ -42,11 +44,11 @@ public class RigidBodySleep : MonoBehaviour {
         if (other.transform.tag == "Player")
         {
             canHold = false;
-            stopMoving();
+            StopMoving();
         }
     }
 
-    private void stopMoving()
+    private void StopMoving()
     {
         rBody.isKinematic = true;
         rBody.velocity = Vector3.zero;

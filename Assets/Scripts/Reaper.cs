@@ -16,8 +16,11 @@ public class Reaper : MonoBehaviour
 
     void Start()
     {
+        //Disable Reaper
         theReaper.SetActive(false);
     }
+
+    //Reaper Fades in, Sacrifice panel activated
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.tag == "Player")
@@ -27,6 +30,8 @@ public class Reaper : MonoBehaviour
             fadein.StartCoroutine("FadeIn");
         }
     }
+
+      //Reaper Fades out
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")

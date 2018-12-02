@@ -17,11 +17,12 @@ public class FadeOutScript : MonoBehaviour {
         
     }
 
-
+    //Slowly fade out the sprite
     IEnumerator FadeOut()
     {
         for (float f = 1f; f >= -0.05f; f -= speed)
         {
+            //change c's alpha value
             Color c = rend.material.color;
             c.a = f;
             rend.material.color = c;
