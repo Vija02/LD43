@@ -10,10 +10,16 @@ public class Reaper : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        theReaper.SetActive(true);
+        if(collision.transform.tag == "Player")
+        {
+            theReaper.SetActive(true);
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        theReaper.SetActive(false);
+        if (collision.transform.tag == "Player")
+        {
+            theReaper.SetActive(false);
+        }
     }
 }
