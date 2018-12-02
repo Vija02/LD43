@@ -34,6 +34,7 @@ public class Respawn : MonoBehaviour
               } 
 
             transform.position = respawnPoint;
+            gameObject.GetComponent<Rigidbody2D>().Sleep();
         }
     }
 }
