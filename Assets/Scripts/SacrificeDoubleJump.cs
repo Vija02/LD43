@@ -5,8 +5,10 @@ using UnityEngine;
 public class SacrificeDoubleJump : MonoBehaviour {
 
     [SerializeField]
-    public GameObject player;
-    public Movement playerMovement;
+    public GameObject player2;
+    public Movement player2Movement;
+    public GameObject player1;
+    public GrapplingHook player1Hook;
     public AbilityController abilityController;
 
     public void Button_Onclick()
@@ -15,7 +17,8 @@ public class SacrificeDoubleJump : MonoBehaviour {
         //set enableDoubleJump to false
 
         
-        abilityController.DisableDoubleJump(player, playerMovement);
+        abilityController.DisableDoubleJump(player2, player2Movement);
+        abilityController.EnableHook(player1, player1Hook);
     }
 
 }
