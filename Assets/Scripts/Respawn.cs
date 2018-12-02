@@ -8,14 +8,14 @@ public class Respawn : MonoBehaviour
     [SerializeField]
     private float minHeightAllowed;
     [SerializeField]
-    public Vector3 respawnPoint;
-    [SerializeField]
     private GameObject[] respawnBlocks;
 
+    public static Vector3 respawnPoint;
     private Vector3[] originalBlockPos;
 
     void Start()
     {
+        respawnPoint = transform.position;
          originalBlockPos = new Vector3[respawnBlocks.Length];
          for(int i=0; i<respawnBlocks.Length; i++)
          {
