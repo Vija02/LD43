@@ -4,9 +4,7 @@ using UnityEngine;
 public class Reaper : MonoBehaviour
 {
     public GameObject theReaper;
-    [SerializeField]
     public FadeInScript fadein;
-    [SerializeField]
     public FadeOutScript fadeout;
 
     private void Awake()
