@@ -6,13 +6,16 @@ public class SacrificeDoubleJump : MonoBehaviour {
 
     [SerializeField]
     public GameObject player;
-    public Movement movementScript;
+    public Movement playerMovement;
+    public AbilityController abilityController;
 
     public void Button_Onclick()
     {
         //On clicking the button
         //set enableDoubleJump to false
-        movementScript.enableDoubleJump = false;
+
+        
+        abilityController.DisableDoubleJump(player, playerMovement);
     }
 
 }
