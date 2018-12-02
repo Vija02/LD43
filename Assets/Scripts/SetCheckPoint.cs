@@ -9,7 +9,7 @@ public class SetCheckPoint : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             Respawn.respawnPoint = transform.position;
-            transform.position = new Vector3(0, -10, 0);
+            transform.gameObject.SetActive(false);
         }
     }
 }
