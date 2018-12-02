@@ -530,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMax: 8
   yMax: 4
-  xMin: -1
+  xMin: 4
   yMin: 0
   cam: {fileID: 259723394}
 --- !u!1 &389165278
@@ -745,6 +745,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114376149211039658, guid: 53b72568ed38f974b9faf53eb6785bd3,
+        type: 2}
+      propertyPath: respawnBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4654511185585632, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -8.5
@@ -777,6 +782,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114376149211039658, guid: 53b72568ed38f974b9faf53eb6785bd3,
+        type: 2}
+      propertyPath: respawnBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1250380164}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
   m_IsPrefabAsset: 0
