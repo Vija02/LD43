@@ -22,20 +22,28 @@ public class SlideScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+        //platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
 
         if(platform.transform.position == currentPoint.position)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
                 pointSelection++;
 
                 if(pointSelection == points.Length)
                 {
                     pointSelection = 0;
                 }
-            }
+            
              currentPoint = points[pointSelection];
         }
     }
+
+    public void OnClick()
+    {
+        while (platform.transform.position != currentPoint.position)
+        {
+            platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+        }
+
+    }
+
 }
