@@ -4,6 +4,8 @@ using UnityEngine;
 public class Reaper : MonoBehaviour
 {
     public GameObject theReaper;
+    public GameObject sacrificePanel;
+    [SerializeField]
     public FadeInScript fadein;
     public FadeOutScript fadeout;
 
@@ -22,6 +24,7 @@ public class Reaper : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             theReaper.SetActive(true);
+            sacrificePanel.SetActive(true);
             fadein.StartCoroutine("FadeIn");
         }
     }
@@ -29,6 +32,7 @@ public class Reaper : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
+            sacrificePanel.SetActive(false);
             fadeout.StartCoroutine("FadeOut");
         }
         
