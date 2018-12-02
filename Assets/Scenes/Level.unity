@@ -960,6 +960,11 @@ Prefab:
       propertyPath: enableGrapplingHook
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114814615614903794, guid: 53b72568ed38f974b9faf53eb6785bd3,
+        type: 2}
+      propertyPath: respawnBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1961543349}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
   m_IsPrefabAsset: 0
@@ -35799,6 +35804,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 896492526}
   m_Script: {fileID: 11500000, guid: 4acb31750477a4d4ca71a066feeaf611, type: 3}
+--- !u!1 &1961543349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1923927781768660, guid: 051cbcaa2c72c5b49a654ce93fe7547e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1939612240}
 --- !u!1 &1964052800
 GameObject:
   m_ObjectHideFlags: 0
@@ -35888,8 +35898,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7850186b0110b61438a71938ce4a1e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 451259309}
-  playerMovement: {fileID: 451259313}
+  player2: {fileID: 0}
+  player2Movement: {fileID: 0}
+  player1: {fileID: 0}
+  player1Hook: {fileID: 0}
   abilityController: {fileID: 473183735}
 --- !u!4 &2127007041
 Transform:
