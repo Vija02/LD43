@@ -78,6 +78,15 @@ public class Movement : MonoBehaviour
 
     public void Move(float move, bool crouch, bool jump)
     {
+        if(move == 0)
+        {
+            stopWalkSound();
+        }
+        else if(m_Grounded)
+        {
+            playWalkSound();
+        }
+
         if (wasJumping && !jump)
         {
             ableToDoubleJump = true;
@@ -85,6 +94,7 @@ public class Movement : MonoBehaviour
         if (!wasJumping && jump)
         {
             playJumpSound();
+            stopWalkSound();
             currentAirTime = airTime;
             wasJumping = true;
         }
@@ -130,7 +140,7 @@ public class Movement : MonoBehaviour
                     OnCrouchEvent.Invoke(false);
                 }
             }
-
+            
             // Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
@@ -200,4 +210,16 @@ public class Movement : MonoBehaviour
         gameObject.transform.Find("Sounds/Jumps").gameObject.GetComponent<AudioSource>().Play();
     }
 
+    public void playWalkSound()
+    {
+        AudioSource audioSource = gameObject.transform.Find("Sounds/Walk").gameObject.GetComponent<AudioSource>();
+        if (!audioSource.isPlaying)
+        {
+            gameObject.transform.Find("Sounds/Walk").gameObject.GetComponent<AudioSource>().Play();
+        }
+    }
+    public void stopWalkSound()
+    {
+        gameObject.transform.Find("Sounds/Walk").gameObject.GetComponent<AudioSource>().Stop();
+    }
 }
