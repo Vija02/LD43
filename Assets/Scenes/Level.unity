@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 346466904}
   - component: {fileID: 346466905}
   m_Layer: 5
-  m_Name: SlideInOut
+  m_Name: SlideControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,13 +260,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac09af126f654d4fb956ad37f8c350a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 473183731}
-  moveSpeed: 250
-  currentPoint: {fileID: 930078201}
+  Bar: {fileID: 473183731}
+  CurrentPoint: {fileID: 0}
   points:
   - {fileID: 1909055557}
   - {fileID: 930078201}
-  pointSelection: 1
+  pointSelection: 0
 --- !u!1 &423969578
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,13 +275,15 @@ GameObject:
   m_Component:
   - component: {fileID: 423969579}
   - component: {fileID: 423969580}
+  - component: {fileID: 423969582}
+  - component: {fileID: 423969581}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &423969579
 Transform:
   m_ObjectHideFlags: 0
@@ -342,6 +343,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &423969581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423969578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d021e5e8d2ab44ebf44b7aa8945b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.05
+--- !u!114 &423969582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423969578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c340629602086074e8a0ff294693d6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.02
 --- !u!1 &473183731
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.4893121, y: 0.21928301}
-  m_AnchoredPosition: {x: -15.799988, y: -2.5}
+  m_AnchoredPosition: {x: -425, y: -2.5}
   m_SizeDelta: {x: -30, y: -33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473183733
@@ -420,18 +445,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 473183731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bac09af126f654d4fb956ad37f8c350a, type: 3}
+  m_Script: {fileID: 11500000, guid: c340629602086074e8a0ff294693d6f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 473183731}
-  moveSpeed: 250
-  currentPoint: {fileID: 0}
-  points:
-  - {fileID: 1909055557}
-  - {fileID: 930078201}
-  pointSelection: 0
+  speed: 0.01
 --- !u!1 &541394613
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,8 +561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theReaper: {fileID: 423969578}
   sacrificePanel: {fileID: 473183731}
-  fadein: {fileID: 0}
-  fadeout: {fileID: 0}
+  fadein: {fileID: 423969582}
+  fadeout: {fileID: 423969581}
 --- !u!61 &559308394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -748,7 +767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930078201}
   m_Layer: 5
-  m_Name: SlideOut
+  m_Name: SlideEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34873,7 +34892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909055557}
   m_Layer: 5
-  m_Name: SlideIn
+  m_Name: SlideStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FadeInScript : MonoBehaviour {
 
     SpriteRenderer rend;
+    public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class FadeInScript : MonoBehaviour {
 
     IEnumerator FadeIn()
     {
-        for (float f=0.05f; f<=1; f += 0.05f)
+        for (float f=0.05f; f<=1; f += speed)
         {
             Color c = rend.material.color;
             c.a = f;

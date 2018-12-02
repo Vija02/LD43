@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SlideScript : MonoBehaviour {
 
-    public GameObject platform;
+    public GameObject Bar;
 
-    public float moveSpeed;
 
-    public Transform currentPoint;
+    public Transform CurrentPoint;
 
     public Transform[] points;
 
@@ -16,32 +15,26 @@ public class SlideScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        currentPoint = points[pointSelection];
+        CurrentPoint = points[pointSelection];
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        //platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
-
-        if(platform.transform.position == currentPoint.position)
+        if(Bar.transform.position == CurrentPoint.position)
         {
-                pointSelection++;
-
-                if(pointSelection == points.Length)
-                {
-                    pointSelection = 0;
-                }
+             pointSelection = (pointSelection + 1) % 2;
             
-             currentPoint = points[pointSelection];
+             CurrentPoint = points[pointSelection];
         }
     }
 
+    // Bar moves in and out when player clicks the button
     public void OnClick()
     {
-        while (platform.transform.position != currentPoint.position)
+        while (Bar.transform.position != CurrentPoint.position)
         {
-            platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+            Bar.transform.position = Vector3.MoveTowards(Bar.transform.position, CurrentPoint.position, Time.deltaTime);
         }
 
     }

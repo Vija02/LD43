@@ -5,7 +5,6 @@ public class Reaper : MonoBehaviour
 {
     public GameObject theReaper;
     public GameObject sacrificePanel;
-    [SerializeField]
     public FadeInScript fadein;
     public FadeOutScript fadeout;
 
@@ -32,7 +31,6 @@ public class Reaper : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            sacrificePanel.SetActive(false);
             fadeout.StartCoroutine("FadeOut");
         }
         

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FadeOutScript : MonoBehaviour {
 
     SpriteRenderer rend;
+    public float speed;
 
     // Use this for initialization
     void Start()
@@ -19,7 +20,7 @@ public class FadeOutScript : MonoBehaviour {
 
     IEnumerator FadeOut()
     {
-        for (float f = 1f; f >= -0.05f; f -= 0.05f)
+        for (float f = 1f; f >= -0.05f; f -= speed)
         {
             Color c = rend.material.color;
             c.a = f;
