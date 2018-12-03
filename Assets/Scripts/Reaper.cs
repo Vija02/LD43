@@ -4,7 +4,6 @@ using UnityEngine;
 public class Reaper : MonoBehaviour
 {
     public GameObject sacrificePanel;
-    public GameObject sacrificePanel2;
 
     public MovingPlatform platformToMove;
 
@@ -16,9 +15,7 @@ public class Reaper : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             sacrificePanel.GetComponent<AbilityController>().sacrificeOn = this;
-            sacrificePanel2.GetComponent<AbilityController>().sacrificeOn = this;
             sacrificePanel.SetActive(true);
-            sacrificePanel2.SetActive(true);
         }
     }
 
@@ -27,7 +24,6 @@ public class Reaper : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             sacrificePanel.SetActive(false);
-            sacrificePanel2.SetActive(false);
         }
     }
 
@@ -48,7 +44,6 @@ public class Reaper : MonoBehaviour
         }
 
         sacrificePanel.SetActive(false);
-        sacrificePanel2.SetActive(false);
         gameObject.SetActive(false);
     }
 
