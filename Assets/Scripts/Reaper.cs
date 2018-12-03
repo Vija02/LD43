@@ -7,6 +7,7 @@ public class Reaper : MonoBehaviour
     public GameObject sacrificePanel2;
 
     public MovingPlatform platformToMove;
+    public GameObject platformToRemove;
 
     public int sacrificeNum = 1;
 
@@ -42,6 +43,9 @@ public class Reaper : MonoBehaviour
                 break;
             case 2: // Move platform
                 platformToMove.MoveSpeed = 5;
+                break;
+            case 3: // Remove barrier
+                platformToRemove.SetActive(false);
                 break;
             default:
                 break;
