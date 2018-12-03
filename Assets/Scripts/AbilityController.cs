@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AbilityController : MonoBehaviour {
 
-    public int player = 1;
+    public GameObject player;
+    public int playerNum = 1;
 
     public Movement movement;
     public GrapplingHook hook;
@@ -15,12 +16,14 @@ public class AbilityController : MonoBehaviour {
     public GameObject pushUI;
     public GameObject hookUI;
 
+    public Reaper sacrificeOn;
+
     void Update()
     {
         DBJUI.SetActive(movement.enableDoubleJump);
         jumpUI.SetActive(movement.enableJump);
         walkUI.SetActive(movement.enableWalk);
-        if(player == 1)
+        if(playerNum == 1)
         {
             pushUI.SetActive(RigidBodySleep.enablePushP1);
         }
@@ -34,18 +37,21 @@ public class AbilityController : MonoBehaviour {
     public void DisableDBJ()
     {
         movement.enableDoubleJump = false;
+        sacrificeOn.OnSacrifice(player);
     }
     public void DisableJump()
     {
         movement.enableJump = false;
+        sacrificeOn.OnSacrifice(player);
     }
     public void DisableWalk()
     {
         movement.enableWalk = false;
+        sacrificeOn.OnSacrifice(player);
     }
     public void DisablePush()
     {
-        if (player == 1)
+        if (playerNum == 1)
         {
             RigidBodySleep.enablePushP1 = false;
         }
@@ -53,11 +59,13 @@ public class AbilityController : MonoBehaviour {
         {
             RigidBodySleep.enablePushP2 = false;
         }
-        
+        sacrificeOn.OnSacrifice(player);
+
     }
     public void DisableHook()
     {
         hook.enableGrapplingHook = false;
+        sacrificeOn.OnSacrifice(player);
     }
 
 }
