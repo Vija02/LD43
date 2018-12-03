@@ -72,6 +72,7 @@ public class Movement : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
+                GetComponent<Animator>().SetBool("isOnGround", true);
                 wasJumping = false;
                 ableToDoubleJump = false;
                 doubleJumped = false;
@@ -188,10 +189,6 @@ public class Movement : MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce * (currentAirTime /airTime)));
-        }
-        else
-        {
-            GetComponent<Animator>().SetBool("isOnGround", true);
         }
         if (enableDoubleJump && ableToDoubleJump && !doubleJumped && jump)
         {

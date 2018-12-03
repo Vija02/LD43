@@ -18,6 +18,7 @@ public class GrapplingHook : MonoBehaviour {
     void Update() {
         if (Input.GetButton(buttonName) && enableGrapplingHook)
         {
+            GetComponent<Animator>().SetBool("isHooking", true);
             hooked = true;
             GameObject[] hooks = GameObject.FindGameObjectsWithTag("Hook");
 
@@ -46,11 +47,13 @@ public class GrapplingHook : MonoBehaviour {
             }
             else
             {
+                GetComponent<Animator>().SetBool("isHooking", false);
                 hooked = false;
             }
         }
         else
         {
+            GetComponent<Animator>().SetBool("isHooking", false);
             hooked = false;
         }
 
