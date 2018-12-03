@@ -56643,6 +56643,11 @@ Prefab:
       propertyPath: delay
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 61133684790414714, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.23
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3, type: 2}
   m_IsPrefabAsset: 0
