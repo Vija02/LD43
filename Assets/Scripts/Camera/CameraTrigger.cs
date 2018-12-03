@@ -4,10 +4,21 @@ using UnityEngine;
 public class CameraTrigger : MonoBehaviour
 {
 
+    bool cameraShouldTarget = false;
+
     private bool tped = false;
     private int numOfPlayerInside = 0;
 
     public GameObject tpPoint;
+
+    private void Update()
+    {
+        if (cameraShouldTarget)
+        {
+            Camera.main.GetComponent<CameraFollow>().enabled = false;
+            Camera.main.GetComponent<CameraTarget>().target = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,8 +26,7 @@ public class CameraTrigger : MonoBehaviour
         {
             numOfPlayerInside++;
 
-            Camera.main.GetComponent<CameraFollow>().enabled = false;
-            Camera.main.GetComponent<CameraTarget>().target = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+            cameraShouldTarget = true;
 
             if (tped || !tpPoint)
             {
@@ -44,8 +54,8 @@ public class CameraTrigger : MonoBehaviour
     {
         if (collision.transform.tag == "Player" && collision.GetType() == typeof(BoxCollider2D))
         {
-            Debug.Log("exit");
-            Debug.Log(collision.gameObject.name);
+            cameraShouldTarget = false;
+
             numOfPlayerInside--;
 
             Camera.main.GetComponent<CameraFollow>().enabled = true;
