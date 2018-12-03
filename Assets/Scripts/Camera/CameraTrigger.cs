@@ -11,7 +11,7 @@ public class CameraTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player" && collision.GetType() == typeof(BoxCollider2D))
         {
             numOfPlayerInside++;
 
@@ -42,8 +42,10 @@ public class CameraTrigger : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Player" && collision.GetType() == typeof(BoxCollider2D))
         {
+            Debug.Log("exit");
+            Debug.Log(collision.gameObject.name);
             numOfPlayerInside--;
 
             Camera.main.GetComponent<CameraFollow>().enabled = true;
