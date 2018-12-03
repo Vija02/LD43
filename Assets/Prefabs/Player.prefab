@@ -621,6 +621,7 @@ MonoBehaviour:
   minHeightAllowed: -30
   respawnBlocks:
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!120 &120681175952400232
 LineRenderer:
   m_ObjectHideFlags: 1
