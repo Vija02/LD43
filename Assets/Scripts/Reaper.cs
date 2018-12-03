@@ -29,6 +29,8 @@ public class Reaper : MonoBehaviour
 
     public void OnSacrifice(GameObject player)
     {
+        Camera.main.transform.GetChild(0).GetComponent<AudioSource>().Play();
+        Camera.main.transform.GetChild(1).GetComponent<AudioSource>().Play();
         switch (sacrificeNum)
         {
             case 1: // Give hook
