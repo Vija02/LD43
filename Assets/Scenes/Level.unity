@@ -56668,7 +56668,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497280717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.19, y: -2.99, z: 0}
+  m_LocalPosition: {x: -5.34, y: -2.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1614539584}
@@ -59392,8 +59392,8 @@ MonoBehaviour:
   sacrificePanel: {fileID: 473183731}
   sacrificePanel2: {fileID: 258790124}
   platformToMove: {fileID: 1765171622}
-  platformToRemove: {fileID: 0}
-  sacrificeNum: 2
+  platformToRemove: {fileID: 577046824}
+  sacrificeNum: 3
 --- !u!61 &1345140448
 BoxCollider2D:
   m_ObjectHideFlags: 0
