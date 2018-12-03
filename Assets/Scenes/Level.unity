@@ -59582,6 +59582,7 @@ GameObject:
   - component: {fileID: 1360981191}
   - component: {fileID: 1360981190}
   - component: {fileID: 1360981189}
+  - component: {fileID: 1360981193}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -59667,6 +59668,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1360981193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360981188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57dcefb8aa0b71243865d88e2b9ad7c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1396552940
 GameObject:
   m_ObjectHideFlags: 0
@@ -60687,9 +60706,12 @@ TextMesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1644048572}
-  m_Text: 'You''ve been trapped in the everlasting cave.
-
-    Survive and find a way out of this nightmare!'
+  m_Text: "Trapped in this cold cave of despair and isolation,\nyou absolutely must
+    escape. For should you fail,\nthe behemoth that patiently awaits you will drag\nyour
+    soul into the depths of despair for all eternity!\r\nGrace to the gods, for you
+    feel like you can jump\nreally high, maybe even twice\u2026 \n\nCan you utilise
+    your deductive reasoning\nand acrobatic prowess to escape from death itself?\r\nSacrifice
+    everything for freedom, or die trying.\r\nYour choice."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1.36
