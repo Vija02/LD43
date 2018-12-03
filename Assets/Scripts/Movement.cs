@@ -21,7 +21,11 @@ public class Movement : MonoBehaviour
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
 
+
+    public bool enableWalk = true;
+
     // Jumping forces
+    public bool enableJump = true;
     public bool enableDoubleJump = true;
     private bool ableToDoubleJump = false; // To know when the user released the jump key
     private bool doubleJumped = false; // Whether double jumped used or not
@@ -82,7 +86,7 @@ public class Movement : MonoBehaviour
         {
             stopWalkSound();
         }
-        else if(m_Grounded)
+        else if(m_Grounded && enableWalk)
         {
             playWalkSound();
         }
@@ -91,7 +95,7 @@ public class Movement : MonoBehaviour
         {
             ableToDoubleJump = true;
         }
-        if (!wasJumping && jump)
+        if (!wasJumping && jump && enableJump)
         {
             playJumpSound();
             stopWalkSound();
@@ -140,11 +144,15 @@ public class Movement : MonoBehaviour
                     OnCrouchEvent.Invoke(false);
                 }
             }
-            
+
             // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
-            // And then smoothing it out and applying it to the character
-            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            if (enableWalk || !m_Grounded)
+            {
+                Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+                // And then smoothing it out and applying it to the character
+                m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            }
+            
 
             // If the input is moving the player right and the player is facing left...
             if (move > 0 && !m_FacingRight)
@@ -160,7 +168,7 @@ public class Movement : MonoBehaviour
             }
         }
         // If the player should jump...
-        if (jump && currentAirTime > 0)
+        if (enableJump && jump && currentAirTime > 0)
         {
             // Add a vertical force to the player.
             m_Grounded = false;

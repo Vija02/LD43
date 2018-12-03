@@ -402,7 +402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39088717, y: 0}
   m_AnchorMax: {x: 0.5857744, y: 1}
-  m_AnchoredPosition: {x: 0.14889526, y: -0.0018844604}
+  m_AnchoredPosition: {x: 0.14889526, y: -0.0018920898}
   m_SizeDelta: {x: 0.13978577, y: -0.0037841797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317719340
@@ -444,8 +444,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127007040}
-        m_MethodName: Button_Onclick
+      - m_Target: {fileID: 473183735}
+        m_MethodName: DisableWalk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53562,23 +53562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatStrength: 0.6
---- !u!1 &451259309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1527022770829320, guid: ea492bb9c3b2e0d49a7f96bd6ee4dc1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1749344841}
---- !u!114 &451259311 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114668206125479022, guid: ea492bb9c3b2e0d49a7f96bd6ee4dc1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1749344841}
-  m_Script: {fileID: 11500000, guid: de7e6ee68d9187f40893d876d2770c76, type: 3}
---- !u!114 &451259313 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114706456082875672, guid: ea492bb9c3b2e0d49a7f96bd6ee4dc1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1749344841}
-  m_Script: {fileID: 11500000, guid: 4acb31750477a4d4ca71a066feeaf611, type: 3}
 --- !u!1 &473183731
 GameObject:
   m_ObjectHideFlags: 0
@@ -53592,7 +53575,7 @@ GameObject:
   - component: {fileID: 473183735}
   - component: {fileID: 473183736}
   m_Layer: 5
-  m_Name: SacrificePanel-P2
+  m_Name: SacrificePanel-P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53618,7 +53601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.35900003, y: 0.17400001}
-  m_AnchoredPosition: {x: 1.3499756, y: -0.2000122}
+  m_AnchoredPosition: {x: 1.3499756, y: -0.20007324}
   m_SizeDelta: {x: -19.5, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473183733
@@ -53666,12 +53649,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2eb9fc161ed854c8d5e07cd8f609be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 1960736151}
-  Player1Movement: {fileID: 1960736155}
-  Player1GrappingHook: {fileID: 1960736153}
-  Player2GrappingHook: {fileID: 451259311}
-  Player2: {fileID: 451259309}
-  Player2Movement: {fileID: 451259313}
+  player: 1
+  movement: {fileID: 1960736155}
+  hook: {fileID: 1960736153}
+  DBJUI: {fileID: 822633135}
+  jumpUI: {fileID: 639972473}
+  walkUI: {fileID: 317719338}
+  pushUI: {fileID: 808946430}
+  hookUI: {fileID: 1426038235}
 --- !u!114 &473183736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54056,7 +54041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19488716, y: 0}
   m_AnchorMax: {x: 0.39088717, y: 1}
-  m_AnchoredPosition: {x: 0.11190796, y: -0.001914978}
+  m_AnchoredPosition: {x: 0.11190796, y: -0.0019226074}
   m_SizeDelta: {x: 0.13978577, y: -0.0037841797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639972475
@@ -54098,8 +54083,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127007040}
-        m_MethodName: Button_Onclick
+      - m_Target: {fileID: 473183735}
+        m_MethodName: DisableJump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54261,7 +54246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5857744, y: 0}
   m_AnchorMax: {x: 0.7815641, y: 1}
-  m_AnchoredPosition: {x: 0.18589783, y: -0.0018844604}
+  m_AnchoredPosition: {x: 0.18589783, y: -0.0018920898}
   m_SizeDelta: {x: 0.13978577, y: -0.0037841797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808946432
@@ -54303,8 +54288,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127007040}
-        m_MethodName: Button_Onclick
+      - m_Target: {fileID: 473183735}
+        m_MethodName: DisablePush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54429,7 +54414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.19488716, y: 1}
-  m_AnchoredPosition: {x: 0.07489014, y: -0.0018844604}
+  m_AnchoredPosition: {x: 0.07489014, y: -0.0018920898}
   m_SizeDelta: {x: 0.13978577, y: -0.0037841797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822633137
@@ -54471,8 +54456,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127007040}
-        m_MethodName: Button_Onclick
+      - m_Target: {fileID: 473183735}
+        m_MethodName: DisableDBJ
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55134,7 +55119,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 473183732}
-  - {fileID: 2127007041}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55176,7 +55160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7815641, y: 0}
   m_AnchorMax: {x: 0.98356414, y: 1}
-  m_AnchoredPosition: {x: -0.2751007, y: -0.0018844604}
+  m_AnchoredPosition: {x: -0.2751007, y: -0.0018920898}
   m_SizeDelta: {x: -0.86021423, y: -0.0037841797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426038237
@@ -55218,8 +55202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127007040}
-        m_MethodName: Button_Onclick
+      - m_Target: {fileID: 473183735}
+        m_MethodName: DisableHook
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -55998,11 +55982,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4309389887247322, guid: a1b75e7fe4ae073479c72b6158b5e5ea,
     type: 2}
   m_PrefabInternal: {fileID: 820080056}
---- !u!1 &1960736151 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1472064859690062, guid: 53b72568ed38f974b9faf53eb6785bd3,
-    type: 2}
-  m_PrefabInternal: {fileID: 896492526}
 --- !u!114 &1960736153 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114117223994536104, guid: 53b72568ed38f974b9faf53eb6785bd3,
@@ -56081,49 +56060,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2127007039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2127007041}
-  - component: {fileID: 2127007040}
-  m_Layer: 0
-  m_Name: sacrificeDoubleJump
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2127007040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2127007039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7850186b0110b61438a71938ce4a1e76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player2: {fileID: 0}
-  player2Movement: {fileID: 0}
-  player1: {fileID: 0}
-  player1Hook: {fileID: 0}
-  abilityController: {fileID: 473183735}
---- !u!4 &2127007041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2127007039}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -329.11212, y: -152.52196, z: -3.4225848}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1360981192}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

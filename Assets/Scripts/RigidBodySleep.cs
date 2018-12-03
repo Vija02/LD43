@@ -9,6 +9,9 @@ public class RigidBodySleep : MonoBehaviour {
 
     public bool canHold = false;
 
+    public static bool enablePushP1 = true;
+    public static bool enablePushP2 = true;
+
     // Use this for initialization
     void Start () {
         rBody.mass = 0.8f;
@@ -19,7 +22,7 @@ public class RigidBodySleep : MonoBehaviour {
 	void Update () {
 
         //When left shift is clicked, enable physics
-        if (Input.GetButtonDown("Action") || Input.GetButtonDown("Action2"))
+        if ((enablePushP1 && Input.GetButtonDown("Action")) || (enablePushP2 && Input.GetButtonDown("Action2")))
         {
             rBody.isKinematic = false;
         }

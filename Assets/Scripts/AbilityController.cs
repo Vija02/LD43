@@ -4,46 +4,60 @@ using UnityEngine;
 
 public class AbilityController : MonoBehaviour {
 
-    public GameObject Player1;
-    public Movement Player1Movement;
+    public int player = 1;
 
-    public GrapplingHook Player1GrappingHook;
-    public GrapplingHook Player2GrappingHook;
+    public Movement movement;
+    public GrapplingHook hook;
 
-    public GameObject Player2;
-    public Movement Player2Movement;
+    public GameObject DBJUI;
+    public GameObject jumpUI;
+    public GameObject walkUI;
+    public GameObject pushUI;
+    public GameObject hookUI;
 
-    public void EnableDoubleJump(GameObject player, Movement playermovement)
+    void Update()
     {
-        playermovement.enableDoubleJump = true;
+        DBJUI.SetActive(movement.enableDoubleJump);
+        jumpUI.SetActive(movement.enableJump);
+        walkUI.SetActive(movement.enableWalk);
+        if(player == 1)
+        {
+            pushUI.SetActive(RigidBodySleep.enablePushP1);
+        }
+        else
+        {
+            pushUI.SetActive(RigidBodySleep.enablePushP2);
+        }
+        hookUI.SetActive(hook.enableGrapplingHook);
     }
 
-    public void DisableDoubleJump(GameObject player, Movement playermovement)
+    public void DisableDBJ()
     {
-        playermovement.enableDoubleJump = false;
+        movement.enableDoubleJump = false;
     }
-
-    public void EnableHook(GameObject player, GrapplingHook hook)
+    public void DisableJump()
     {
-        hook.enableGrapplingHook = true;
+        movement.enableJump = false;
     }
-
-    public void DisableHook(GameObject player, GrapplingHook hook)
+    public void DisableWalk()
+    {
+        movement.enableWalk = false;
+    }
+    public void DisablePush()
+    {
+        if (player == 1)
+        {
+            RigidBodySleep.enablePushP1 = false;
+        }
+        else
+        {
+            RigidBodySleep.enablePushP2 = false;
+        }
+        
+    }
+    public void DisableHook()
     {
         hook.enableGrapplingHook = false;
     }
 
-    // Use this for initialization
-    void Start()
-    {
-        EnableDoubleJump(Player1, Player1Movement);
-        EnableHook(Player2, Player2GrappingHook);
-
-        DisableDoubleJump(Player2, Player2Movement);
-        DisableHook(Player1, Player1GrappingHook);
-
-    }
-
-    //Every button in the menu leads to here
-	
 }
