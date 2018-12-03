@@ -9,7 +9,6 @@ public class Respawn : MonoBehaviour
     private float minHeightAllowed;
     [SerializeField]
     private GameObject[] respawnBlocks;
-
     public static Vector3 respawnPoint;
     private Vector3[] originalBlockPos;
 
