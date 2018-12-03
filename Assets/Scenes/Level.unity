@@ -56565,6 +56565,7 @@ GameObject:
   - component: {fileID: 423969579}
   - component: {fileID: 423969580}
   - component: {fileID: 423969583}
+  - component: {fileID: 423969581}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -56632,6 +56633,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &423969581
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423969578}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2b4788c8db24d642be43db7edc0f937, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &423969583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58864,6 +58883,7 @@ GameObject:
   - component: {fileID: 1084189316}
   - component: {fileID: 1084189319}
   - component: {fileID: 1084189320}
+  - component: {fileID: 1084189317}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -58885,6 +58905,24 @@ Transform:
   m_Father: {fileID: 421075720}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1084189317
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084189315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0686bc8c89c773e4da9cd780750d22fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1084189319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -60522,6 +60560,7 @@ GameObject:
   - component: {fileID: 1625598922}
   - component: {fileID: 1625598924}
   - component: {fileID: 1625598923}
+  - component: {fileID: 1625598925}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -60601,6 +60640,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1625598925
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625598921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f76df1d82bda8d43b326fa29d420d49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1639937189
 GameObject:
   m_ObjectHideFlags: 0
