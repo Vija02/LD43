@@ -19,13 +19,13 @@ public class RigidBodySleep : MonoBehaviour {
 	void Update () {
 
         //When left shift is clicked, enable physics
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetButtonDown("Action") || Input.GetButtonDown("Action2"))
         {
             rBody.isKinematic = false;
         }
 
         //When realsed, the block could no longer be moved
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (!Input.GetButton("Action") && !Input.GetButton("Action2"))
         {
             StopMoving();
         }
