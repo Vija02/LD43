@@ -8,7 +8,8 @@ public class DeathTrigger : MonoBehaviour {
     {
         if(collision.transform.tag == "Player")
         {
-            collision.transform.position = new Vector3(0, -30, 0);
+            GameObject.Find("Player").transform.position = new Vector3(0, -30, 0);
+            GameObject.Find("Player2").transform.position = new Vector3(0, -30, 0);
         }
     }
 }
