@@ -625,6 +625,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4309389887247322, guid: a1b75e7fe4ae073479c72b6158b5e5ea,
     type: 2}
   m_PrefabInternal: {fileID: 1754179826}
+--- !u!1 &191708318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1923927781768660, guid: 051cbcaa2c72c5b49a654ce93fe7547e,
+    type: 2}
+  m_PrefabInternal: {fileID: 90279447}
 --- !u!4 &228439374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4869873247030856, guid: 09f1c4141d0fd6e4da03ae97f9d3dcb3,
@@ -54503,11 +54508,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4140959360371518, guid: a8b125b384cff8f49b45feedd873c9b7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.41
+      value: 4.408
       objectReference: {fileID: 0}
     - target: {fileID: 4140959360371518, guid: a8b125b384cff8f49b45feedd873c9b7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 34.437
+      value: 31.437
       objectReference: {fileID: 0}
     - target: {fileID: 4140959360371518, guid: a8b125b384cff8f49b45feedd873c9b7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -55641,6 +55646,11 @@ Prefab:
       propertyPath: respawnBlocks.Array.data[0]
       value: 
       objectReference: {fileID: 1961543349}
+    - target: {fileID: 114814615614903794, guid: 53b72568ed38f974b9faf53eb6785bd3,
+        type: 2}
+      propertyPath: respawnBlocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 191708318}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b72568ed38f974b9faf53eb6785bd3, type: 2}
   m_IsPrefabAsset: 0

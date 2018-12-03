@@ -153,7 +153,18 @@ public class Movement : MonoBehaviour
                 Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
                 // And then smoothing it out and applying it to the character
                 m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+                
+                if(move != 0)
+                {
+                    GetComponent<Animator>().SetBool("isWalking", true);
+                }
+                else
+                {
+                    GetComponent<Animator>().SetBool("isWalking", false);
+                }
+
             }
+            
             
 
             // If the input is moving the player right and the player is facing left...
@@ -172,9 +183,15 @@ public class Movement : MonoBehaviour
         // If the player should jump...
         if (enableJump && jump && currentAirTime > 0)
         {
+            GetComponent<Animator>().SetBool("isWalking", false);
+            GetComponent<Animator>().SetBool("isOnGround", false);
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce * (currentAirTime /airTime)));
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isOnGround", true);
         }
         if (enableDoubleJump && ableToDoubleJump && !doubleJumped && jump)
         {
