@@ -233,10 +233,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &90279447
@@ -599,10 +599,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &172057915
@@ -1018,7 +1018,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &257021935
@@ -1866,10 +1866,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &374497139
@@ -34964,12 +34964,12 @@ Prefab:
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileAssetArray.Array.data[9].m_RefCount
-      value: 1351
+      value: 1353
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileSpriteArray.Array.data[9].m_RefCount
-      value: 1351
+      value: 1353
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
@@ -34984,12 +34984,12 @@ Prefab:
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileAssetArray.Array.data[13].m_RefCount
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileSpriteArray.Array.data[13].m_RefCount
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
@@ -35136,12 +35136,12 @@ Prefab:
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileAssetArray.Array.data[8].m_RefCount
-      value: 80
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_TileSpriteArray.Array.data[8].m_RefCount
-      value: 80
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
@@ -45495,12 +45495,12 @@ Prefab:
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_Tiles.Array.data[1443].second.m_TileIndex
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_Tiles.Array.data[1443].second.m_TileSpriteIndex
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
@@ -45525,12 +45525,12 @@ Prefab:
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_Tiles.Array.data[1444].second.m_TileIndex
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
       propertyPath: m_Tiles.Array.data[1444].second.m_TileSpriteIndex
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8195094282288875136, guid: 810fe4cda33d8864689bfadc4c6f46be,
         type: 2}
@@ -72852,7 +72852,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1418952285
@@ -72924,10 +72924,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1426038235
@@ -73137,7 +73137,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1472965459
@@ -73724,7 +73724,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1710915556
@@ -74257,7 +74257,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1900085723
@@ -74731,10 +74731,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2071626948
@@ -74953,6 +74953,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
