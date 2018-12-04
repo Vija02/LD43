@@ -10,7 +10,7 @@ public class EndTrigger : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             Camera.main.GetComponent<AudioSource>().Stop();
-            
+            Camera.main.transform.GetChild(2).GetComponent<AudioSource>().Play();
         }
     }
 }
