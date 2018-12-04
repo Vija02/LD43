@@ -22,7 +22,7 @@ public class RigidBodySleep : MonoBehaviour {
 	void Update () {
 
         //When left shift is clicked, enable physics
-        if (canHold && ((enablePushP1 && Input.GetButtonDown("Action")) || (enablePushP2 && Input.GetButtonDown("Action2"))))
+        if (canHold && ((enablePushP1 && Input.GetButton("Action")) || (enablePushP2 && Input.GetButton("Action2"))))
         {
             rBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
