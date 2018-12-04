@@ -8,13 +8,8 @@ public class RestartScript : MonoBehaviour {
     [SerializeField]
     private Scene scene;
 
-    private void Start()
-    {
-        scene = SceneManager.GetSceneAt(0);
-    }
-
     public void Button_OnClick()
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene("Level");
     }
 }
